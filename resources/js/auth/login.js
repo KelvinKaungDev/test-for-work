@@ -1,5 +1,6 @@
 import axios from 'axios'
 import LoginImg from '../../../public/img/login.jpg'
+import store from '../store';
 
 export default {
     name : 'Login',
@@ -16,8 +17,10 @@ export default {
     methods: {
         async login () {
             const response = await axios.post('login', this.userData);
-            localStorage.setItem('token', response.data.token);
+            store.commit('setUser', response.data)
+
             this.$router.push('/')
+            window.location.reload();
         }
     }
 }

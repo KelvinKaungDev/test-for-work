@@ -28,7 +28,10 @@ class UserService {
         $user   = Auth::user();
         $token  = $user -> createToken('token') -> plainTextToken;
 
-        return $token;
+        return [
+           'user'  => $user,
+           'token' => $token
+        ];
     }
 
     public static function logout($request)

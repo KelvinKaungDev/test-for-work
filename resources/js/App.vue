@@ -69,11 +69,10 @@
                                 </li>
                             </ul>
                         </li> -->
-
-                        <template class="d-flex" v-if="name">
+                        <template class="d-flex" v-if="user">
                             <li class="nav-item me-4 text-white nav-link">
                                 <font-awesome-icon icon="user" class="mr-1" />
-                                {{ name }}
+                                {{ user }}
                             </li>
 
                             <li class="nav-item me-4" @click="logout()">
@@ -112,26 +111,27 @@
 
 <script>
     import axios from 'axios';
+    import store from './store';
+    import { mapGetters } from 'vuex';
 
     export default {
         name : 'App',
-        data () {
-            return {
-                name: null,
-
-            }
-        },
         methods: {
-            async logout () {
-                await axios.post('logout', localStorage.getItem('token'));
-                this.name = null
-                localStorage.removeItem('token')
-                this.$router.push('/login')
-            }
+            logout () {
+                axios.post('logout', localStorage.getItem('token'));
+                store.commit('removeUser')
+                location.reload()
+             }
         },
-        async created () {
-            const response = await axios.get('user');
-            this.name = response.data.name
+        computed: {
+            ...mapGetters([
+                'user',
+            ])
+
         },
+        // async mounted () {
+        //    const response =  await axios.get('user');
+        //     store.commit('setUser', response.data)
+        // }
     }
 </script>

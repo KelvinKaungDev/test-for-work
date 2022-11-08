@@ -31,7 +31,7 @@ class AuthController extends Controller
         $result = UserService::login($request -> validated());
 
         return response() -> json([
-            'token' => $result
+            'result' => $result
         ]);
     }
 
