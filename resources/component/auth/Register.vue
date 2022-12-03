@@ -1,74 +1,240 @@
 <template>
-    <div class="row container-fluid mt-5">
-        <div class="col-md-6">
-            <img :src="RegisterImg" class="register-img">
-        </div>
+    <div class="text-center mt-5">
+        <h2>Online Yogi Registration</h2>
+    </div>
 
-        <div class="col-md-5 mt-5 m-5">
-            <h2 class="mb-3">
-                Register <span class="text-underline"> To Donate </span>
-            </h2>
+    <div class="d-flex justify-content-center pb-5">
+        <form @submit.prevent="register">
+            <div class="row mt-2 col-md-12 mt-5 m-5">
+                <div class="col-md-3 border-end">
+                    <small>
+                        Basic Information
+                    </small>
+                </div>
 
-            <div class="alert alert-danger" role="alert" v-show="errorStatus">
-                This Email and Password do not match
-            </div>
+                <div class="col-md-8 ms-4">
+                    <div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
 
-            <form @submit.prevent="register">
-                <div>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
+                            <input
+                                required
+                                id="name"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter yogi name"
+                            >
+                        </div>
 
-                        <input
-                            required
-                            id="name"
-                            type="text"
-                            class="form-control"
-                            v-model="userData.name"
-                        >
-                    </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Father Name</label>
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
+                            <input
+                                required
+                                id="name"
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter yogi's father name"
+                            >
+                        </div>
 
-                        <input
-                            required
-                            id="email"
-                            type="email"
-                            class="form-control"
-                            v-model="userData.email"
-                        >
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
 
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                            <input
+                                required
+                                id="email"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter yogi email"
+                            >
+                        </div>
 
-                        <input
-                            required
-                            id="password"
-                            type="password"
-                            class="form-control"
-                            v-model="userData.password"
-                        >
-                    </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Contact Number</label>
 
-                    <router-link to="/register-hospital" class="underline-none">
-                        <span class="text-danger text-underline">
-                            Register as a hospital
-                        </span>
-                    </router-link>
+                            <input
+                                required
+                                id="email"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter yogi's phone number"
+                            >
+                        </div>
 
-                    <div class="d-flex justify-content-center mt-5">
-                        <button
-                            type="submit"
-                            class="btn btn-outline-fg-primary w-75 p-3 hero-btn active"
-                        >
-                            Register
-                        </button>
+                        <div class="row col-md-12 mb-3">
+                            <label for="form-lable" class="mb-2">
+                                Date of Birth
+                            </label>
+
+                            <div class="col-md-4">
+                                <select class="form-control" id="selectGender">
+                                    <option>Day</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <select class="form-control" id="selectGender">
+                                    <option>Month</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <select class="form-control" id="selectGender">
+                                    <option>Year</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                                </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="selectGender" class="mb-2">Gender</label>
+
+                            <select class="form-control" id="selectGender">
+                                <option>Other</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+
+            <div class="row mt-2 col-md-12 mt-5 m-5">
+                <div class="col-md-3 border-end">
+                    <small>
+                        Deatil Information
+                    </small>
+                </div>
+
+                <div class="col-md-8 ms-4">
+                    <div>
+                        <div class="row col-md-12 mb-3">
+                            <label for="form-lable" class="mb-2">
+                                NRC
+                            </label>
+
+                            <div class="col-md-4">
+                                <select class="form-control" id="selectGender">
+                                    <option>Sate Code</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <select class="form-control" id="selectGender">
+                                    <option>City Code</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <select class="form-control" id="selectGender">
+                                    <option>Year</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                                </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <input
+                                required
+                                id="name"
+                                type="text"
+                                class="form-control"
+                                placeholder="Number"
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Yogi ID</label>
+
+                            <input
+                                required
+                                id="email"
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter yogi's ID"
+                            >
+                        </div>
+
+                        <div class="row col-md-12 mb-3">
+                            <label for="form-lable" class="mb-2">
+                                Address
+                            </label>
+
+                            <div class="col-md-6">
+                                <select class="form-control" id="selectGender">
+                                    <option>State/Region</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <select class="form-control" id="selectGender">
+                                    <option>Township</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-2 col-md-12 mt-5 m-5">
+                <div class="col-md-3 border-end">
+                    <small>
+                        Password
+                    </small>
+                </div>
+
+                <div class="col-md-8 ms-4">
+                    <div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+
+                            <input
+                                required
+                                id="password"
+                                type="password"
+                                class="form-control"
+                                placeholder="Password"
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Confirm Password</label>
+
+                            <input
+                                required
+                                id="password"
+                                type="password"
+                                class="form-control"
+                                placeholder="Confirm Password"
+                            >
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary mb-2 col-md-7">
+                    Register
+                </button>
+            </div>
+        </form>
     </div>
 </template>
 
