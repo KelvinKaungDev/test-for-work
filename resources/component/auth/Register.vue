@@ -239,4 +239,3 @@
 </template>
 
 <script src="../../js/auth/register.js"></script>
-

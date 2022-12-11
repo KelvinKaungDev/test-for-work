@@ -73,3 +73,68 @@
      color: white !important;
      background-color: #ff4441 !important;
 }
+
+.circle {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: blue
+}
+
+.email-font, .font-small {
+    margin-right: 10%;
+    font-size: xx-small;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+}
+
+.mediation-table th{
+    font-size: small;
+    color: #475569;;
+    padding: 13px;
+}
+
+.mediation-table td {
+    font-size: small;
+    padding: 13px;
+}
+
+.table-head {
+    border-left: #1E293B 1px;
+}
+
+.letter-space {
+    letter-spacing: -0.04em;
+}
+
+.side-bar {
+    width: 30px;
+}
+
+.img-size {
+    left: 104px;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    border-radius: 16px;
+}
+
+.logo-font {
+    font-family: 'Myanmar Ethnic';
+    font-style: normal;
+    font-weight: 400;
+    color: #1E293B;
+    font-size: 32px;
+}
+
+.card-bg {
+    background-color: #1D4ED8;
+    color: white
+}
