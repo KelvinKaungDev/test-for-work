@@ -1,29 +1,29 @@
 <template>
 
-    <div class="row container-fluid mt-5">
+    <div class="row mt-5">
         <div class="side-bar-width bg-primary text-center text-white">
             hi
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-11 p-0 side-bar-menu">
             <div class="row d-flex justify-content-end p-3">
                 <div class="col-md-1 mt-2">
                     <font-awesome-icon icon="bell" />
                 </div>
 
-                <small class="col-md-1 mt-1">
+                <small class="col-md-1">
                     Min Maung <br>
                     <small class="email-font d-flex justify-content-end">
                         minmaung@gmail.com
                     </small>
                 </small >
 
-                <span class="circle col-md-1">
+                <span class="circle col-md-1 me-3">
                     E
                 </span>
             </div>
 
-            <div class="bg-light p-2">
+            <div class="bg-light p-5 pb-0">
                 <div class="font-small">
                     <small class="text-primary">
                         Online Mediation Group
@@ -149,13 +149,13 @@
                             <tr>
                                 <th>Class ID</th>
                                 <th>TITLE</th>
-                                <th class="font-table-small">CREATED DATE</th>
-                                <th class="font-table-small">CLASS TYPE</th>
-                                <th class="font-table-small">YOGI TYPE</th>
-                                <th class="font-table-small">START DATE</th>
-                                <th class="font-table-small">END DATE</th>
-                                <th class="font-table-small">COUNT</th>
-                                <th class="font-table-small">STATUS</th>
+                                <th >CREATED DATE</th>
+                                <th>CLASS TYPE</th>
+                                <th>YOGI TYPE</th>
+                                <th>START DATE</th>
+                                <th>END DATE</th>
+                                <th>COUNT</th>
+                                <th>STATUS</th>
                                 <th></th>
                               </tr>
                         </thead>
@@ -221,6 +221,28 @@
                             </tr>
                         </tbody>
                       </table>
+                </div>
+
+                <div>
+                    <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                            </ul>
+                    </nav>
                 </div>
             </div>
         </div>

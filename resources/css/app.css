@@ -96,7 +96,7 @@ table {
 }
 
 .mediation-table th{
-    font-size: small;
+    font-size: x-small;
     color: #475569;;
     padding: 13px;
 }
@@ -104,6 +104,14 @@ table {
 .mediation-table td {
     font-size: small;
     padding: 13px;
+}
+
+.side-bar-width {
+    width: 3% !important;
+}
+
+.side-bar-menu {
+    width: 97% !important;
 }
 
 .table-head {
